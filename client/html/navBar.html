@@ -1,0 +1,32 @@
+<template name="mainNav">
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div id="navContainer" class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Wills Little Flower School</a>	
+			</div>
+			<div class="navbar-collapse collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ><span class="glyphicon glyphicon-user"></span> Teacher </a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="/newMember">Add NEW Teacher</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="/activeMember">Current Teachers</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="/routine">Routine</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		{{> yield }}
+	</div>
+</template>

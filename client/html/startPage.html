@@ -1,0 +1,66 @@
+<template name="startPage">
+<div class="container-fluid"> <!-- for bootStrap div-row use -->
+	<div class="col-md-10">
+    {{> dashboard}}
+		{{>recentMember}}
+	</div>
+	<div class="col-md-4">
+		
+	</div>
+</div>
+</template>
+
+<template name="dashboard">
+  <div class="col-md-3 em">
+      <nav class="navbar">
+        
+          <ul class="nav nav-stacked">
+            <li>Dashboard</li>
+            <li>
+              <a class="active" href="/"> OverView </a>
+            </li>
+            <li>
+              <a class="active" href="/newMember">Add New Member</a>
+            </li>
+            <li>
+              <a class="active" href="/routine">Routine</a>
+            </li>
+            <li><a class="active" href="/payment">Payment</a>
+            </li>
+            
+          </ul>
+          
+        
+      </nav>
+
+  </div>
+  
+</template>
+
+<template name="recentMember">
+
+	<div class="row">
+        <h3>List of New Members</h3>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Member's Name</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each recentList}}                    <!-- For each member in active list -->
+                <tr>
+                  <td class= "member {{selectedClass}}">{{memName}}</td>
+                  <td class= "member {{selectedClass}}">{{memAddress}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+  		<div class="row">	
+  		</div>
+	
+</template>
